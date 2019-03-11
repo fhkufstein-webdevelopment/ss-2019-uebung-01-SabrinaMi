@@ -1,38 +1,8 @@
 
-
-
-body {
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size:14px;
-    margin:0;
-    padding:0;
-}
-
-.logo {
-    font-size:30px;
-    text-transform: uppercase;
-
-    background-color:#337ab7;
-    color:#fff;
-
-    display: inline-block;
-    height:80px;
-
-    padding:20px;
-
-    box-sizing:border-box;
-
-    border-radius: 5px;
-
-    margin-top:10px;
-    margin-bottom:50px;
-}
-
-.stripe {
-    background-color:#337ab7;
-    width:100%;
-    height:15px;
-
+.inner {
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo:before {
@@ -42,11 +12,108 @@ body {
     margin-right:15px;
 }
 
+.logo {
+    font-size:30px;
+    text-transform: uppercase;
+    background-color:#337ab7;
+    color:#fff;
+    display: inline-block;
+    height:80px;
+    padding:20px;
+    box-sizing:border-box;
+    border-radius: 5px;
+    margin-top:10px;
+    margin-bottom:50px;
+}
+
+.mainNavi ul {
+    list-style:none;
+}
+
+.mainNavi a{
+    text-decoration: none; /*keine Hyperlink-Verlinkung mehr!*/
+}
+
+
+.level_1,.level_2 {
+    margin: 0;
+    padding:0;
+}
+
+/*Inline-Block erstellt, damit die Navleiste nebeneinander angezeigt wird.*/
+.level_1  li {
+    display:inline-block;
+    background-color: #fff;
+    color: #337ab7;
+    width: 200px;
+    position:relative;
+    padding-bottom:5px;
+    margin-right: -70px;
+}
+
+/*Our Product und About us mit Schriftgröße 18px und Fett gedruckt*/
+.level_1 > li > a {
+    font-weight: bold;
+    font-size: 18px;
+    color: #337ab7;
+}
+
+.level_2 {
+    display: none;
+}
+
+.level_2 > li {
+    display:block;
+    position: relative;
+    width:300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    z-index: 1;
+    /*Der  Z-Index gibt an, in welcher Reihenfolge die einzelnen Elemente auf dem Ausgabemedium dargestellt werden*/
+}
+
+.level_2 > li > a
+{
+    padding-left:3px;
+}
+
+/*Hover Effekt einbinden*/
+header nav .level_1 li:hover .level_2 {
+    display:block;
+    position: absolute;
+    color:#fff;
+}
+
+/*Unterelement*/
+header nav .level_2 li:hover /*FRAGE: leider habe ich es nicht hinbekommen, die Schriftfarbe auf weiß zu ändern*/
+{
+    display:block;
+    background-color:#337ab7;
+    text-decoration: none;
+    color:#fff;
+}
+
+.stripe {
+    background-color:#337ab7;
+    width:auto;
+    margin-left: auto;
+    height:15px;
+}
+
+body {
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    margin:auto;
+    padding:0;
+}
+
 footer {
     background-color:#f8f9fa;
     height: 150px;
     padding-top:20px;
 }
+
+
 
 
 
